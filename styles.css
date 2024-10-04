@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap');
+
+:root {
+    --background: #000;
+    --main: #DAF232;
+    --success: #00FF00;
+    --fail: #FF0000;
+}
+*, 
+*::after, 
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: var(--background);
+    color: var(--font);
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none; 
+    -khtml-user-select: none;
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none;
+} 
+body, 
+button {
+    font-family: 'Inter', sans-serif;
+}
+button {
+    display: block;
+    font-size: 16px;
+    color: var(--main);
+    padding: 25px 50px;
+    border-radius: 100px;
+    outline: none;
+    border: 1px solid var(--main);
+    background: var(--background);
+    margin: 50px auto 100px;
+}
+button.active {
+    color: var(--background);
+    background: var(--main);
+}
+.container {
+    max-width: 428px;
+    margin: 0 auto;
+}
+.octave,
+.octave-test,
+.note-test {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 1px solid var(--main);
+    background: var(--background);
+    position: relative;
+}
+.octave span,
+.octave-test span,
+.note-test span {
+    color: var(--main);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.octave.active {
+    background: var(--main);
+}
+.octave.success {
+    background: var(--success);
+    border: var(--success);
+}
+.octave.fail {
+    background: var(--fail);
+    border: var(--fail);
+}
+.octave.active span,
+.octave.success span,
+.octave.fail span {
+    color: var(--background);
+}
+.row {
+    padding: 0 25px 25px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.score {
+    color: #fff;
+    margin: 75px auto 100px;
+    text-align: center;
+}
